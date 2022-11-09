@@ -5,11 +5,19 @@
  *    3.  Interact with those elements
  *    4.  Assert that the results are as expected
  *
- *  2. What's the dif? => https://www.youtube.com/watch?v=Yghw9FkNGsc&list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ&index=5&ab_channel=TheNetNinja
- *    1.  getBy,
- *    2.  findBy
- *    3.  queryBy
+ *  2. What's the dif? => https://www.youtube.com/watch?v=Yghw9FkNGsc&t=194s
+ *    1.  getBy - Basic
+ *    2.  findBy - Async
+ *    3.  queryBy - Allows no match w/o error (returns null)
  *    4.  getAllBuy, findAllBy, queryAllBy.
+ * 
+ *  3. Test Method PRIORITY ORDER:
+ *    1.  Accessible to Everyone (PRIMARY):
+ *          - getByRole, getByLabelText, getByPlaceholderText, getByText
+ *    2.  Semantic Queries (SECONDARY):
+ *        - getByAltText, getByTitle
+ *    3.  Test ID (LAST RESORT):
+ *        - getByTestId
  */
 
 import { render, screen } from '@testing-library/react';
